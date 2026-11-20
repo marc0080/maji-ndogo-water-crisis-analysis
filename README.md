@@ -94,6 +94,11 @@ Through this project, I strengthened my ability to:
 
 The `Project_progress` table provides a foundation for tracking infrastructure improvement activities, recording completion dates, and capturing updates from engineering teams.
 
+# Project Progress Tracking
+
+The Project_progress table was implemented to support engineering intervention tracking.
+![Project Progress Table](images/project_progress.png)
+
 ## Repository Contents
 
 This repository contains the SQL scripts, supporting analysis, and project documentation developed throughout the Maji Ndogo project.
