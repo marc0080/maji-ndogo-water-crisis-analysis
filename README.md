@@ -66,14 +66,15 @@ The intervention plan identifies the following improvements:
 
 | File | Description |
 |---|---|
+| `majindogo_setup.sql` | Initial database setup |
 | `01_data_exploration.sql` | Initial database exploration |
 | `02_data_cleaning.sql` | Data cleaning and validation |
 | `03_water_access.sql` | Water access analysis |
 | `04_queue_analysis.sql` | Queue time analysis |
 | `05_water_access_summary_report...` | Water access findings and summary |
-| `06_auditor's_analysis.sql` | Data auditing and investigation |
+| `06_data_audit.sql` | Data auditing and investigation |
 | `07_practical_plan.sql` | Engineering intervention planning and implementation |
-| `Auditor_report.csv` | Supporting audit findings |
+| `Auditor_report.csv` | Records from the audit team |
 
 ## Key Learning Outcomes
 
