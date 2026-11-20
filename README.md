@@ -97,7 +97,7 @@ The `Project_progress` table provides a foundation for tracking infrastructure i
 # Project Progress Tracking
 
 The Project_progress table was implemented to support engineering intervention tracking.
-![Project Progress Table](images/project_progress.png)
+![Project Progress Table](image/project_progress.png)
 
 ## Repository Contents
 
