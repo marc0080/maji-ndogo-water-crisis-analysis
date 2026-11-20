@@ -1,76 +1,99 @@
-# Maji Ndogo: From Analysis to Action
+# Maji Ndogo: Water Access Analysis & Infrastructure Improvement
 
 ## Project Overview
 
-Maji Ndogo is an end-to-end SQL data analysis simulation investigating a national water crisis in a fictional country.
+Maji Ndogo is a data analytics project focused on investigating water access, infrastructure challenges, and service delivery across different communities.
 
-Working as a Data Analyst, I analysed a 60,000-record survey database to investigate water accessibility, infrastructure conditions, water quality, collection times and potential data integrity issues.
+Using SQL, I explored and analysed water infrastructure data to identify patterns in water accessibility, pollution, queue times, and infrastructure conditions. The analysis was then translated into practical recommendations to guide engineering interventions and support project progress monitoring.
 
-The objective was to transform raw data into actionable insights that could support evidence-based water infrastructure and service delivery decisions.
+The project demonstrates how data analysis can move beyond identifying problems to supporting evidence-based decision-making and implementation planning.
 
-## Business Problem
+## Project Objectives
 
-Millions of people face challenges accessing reliable and safe water. The project investigated:
-
-- Which water sources serve the largest populations?
-- Where are the most significant water quality and infrastructure problems?
-- When do communities experience the longest water collection queues?
-- How reliable are employee water quality assessments?
-- Are there indicators of potential misconduct requiring further investigation?
+- Investigate water access and infrastructure conditions across different locations.
+- Analyse water source distribution, population served, and queue times.
+- Identify contaminated water sources and broken infrastructure.
+- Investigate data quality issues and potentially suspicious field-worker records.
+- Develop data-driven recommendations for infrastructure improvements.
+- Implement a database table to support engineering work allocation and progress tracking.
 
 ## Tools & Technologies
 
-- MySQL
-- SQL
-- MySQL Workbench
+- **Database:** MySQL
+- **Language:** SQL
+- **Techniques:** Data exploration, data cleaning, filtering, aggregation, joins, subqueries, Common Table Expressions (CTEs), window functions, CASE statements, and database implementation.
 
-## Analytical Process
+## Project Workflow
 
-### 1. Data Exploration and Cleaning
-- Explored database structure and relationships.
-- Investigated inconsistencies in water pollution classifications.
-- Corrected 38 misclassified pollution records.
-- Cleaned employee contact information.
+### 1. Data Exploration
+Examined the available datasets and database structure to understand the relationships between water sources, locations, field visits, and water quality records.
 
-### 2. Water Access and Infrastructure Analysis
-- Analysed water source distribution across urban and rural locations.
-- Evaluated population coverage by water source.
-- Identified shared taps as serving approximately 43% of the population.
-- Investigated broken household water infrastructure and well contamination.
-- Applied SQL window functions to prioritize water sources for intervention.
+### 2. Data Cleaning and Validation
+Investigated data quality issues, inconsistencies, and suspicious records to improve the reliability of subsequent analysis.
 
-### 3. Queue Time Analysis
-- Analysed water collection patterns across 924 days.
-- Calculated average queue times and identified peak collection periods.
-- Used conditional aggregation to compare waiting times by day and hour.
-- Identified periods requiring targeted water distribution interventions.
+### 3. Water Access Analysis
+Analysed water source distribution and population served to understand differences in access across locations.
 
-### 4. Audit and Data Integrity Investigation
-- Integrated independent auditor reports with employee assessments.
-- Evaluated agreement between employee and auditor water quality scores.
-- Established 94% agreement after resolving duplicate records.
-- Identified four employees with above-average reporting discrepancies for further investigation.
+### 4. Queue Time Analysis
+Investigated waiting times at shared water points to identify communities experiencing significant access challenges.
 
-## Key Findings
+### 5. Data Auditing
+Investigated potentially suspicious field-worker records and documented findings to support data integrity and accountability.
 
-- Shared taps served approximately 43% of the surveyed population.
-- Only 28% of wells were classified as clean.
-- Broken household water infrastructure represented a significant service delivery gap.
-- Average water collection queue time was approximately 123 minutes.
-- Employee and auditor assessments agreed in approximately 94% of cases.
+### 6. Practical Implementation Plan
+Translated the analysis into an engineering intervention plan.
 
-## Recommendations
+Created a `Project_progress` table to store:
 
-- Prioritize shared tap infrastructure to improve access for large populations.
-- Repair broken household water infrastructure.
-- Introduce appropriate water treatment interventions based on contamination type.
-- Optimize water distribution during peak collection periods.
-- Investigate suspicious reporting patterns through appropriate audit procedures.
+- Water source identification and location details.
+- Recommended infrastructure improvements.
+- Project status: Backlog, In progress, or Complete.
+- Completion dates and engineering comments.
 
-## Skills Demonstrated
+The table incorporates database constraints to maintain referential integrity and restrict project status values to predefined options.
 
-SQL data cleaning, data validation, relational database analysis, joins, CTEs, subqueries, aggregate functions, window functions, date-time analysis, conditional aggregation, data integrity investigation and analytical storytelling.
+The intervention plan identifies the following improvements:
 
-## Project Structure
+| Water infrastructure issue | Recommended intervention |
+|---|---|
+| River water sources | Drill wells |
+| Chemically contaminated wells | Install RO filters |
+| Biologically contaminated wells | Install UV and RO filters |
+| Shared taps with long queues (30+ minutes) | Install additional taps |
+| Broken household taps | Diagnose local infrastructure |
 
-See the `sql/` directory for the queries organized by analytical stage and `documentation/` for project findings and recommendations.
+## Repository Structure
+
+| File | Description |
+|---|---|
+| `01_data_exploration.sql` | Initial database exploration |
+| `02_data_cleaning.sql` | Data cleaning and validation |
+| `03_water_access.sql` | Water access analysis |
+| `04_queue_analysis.sql` | Queue time analysis |
+| `05_water_access_summary_report...` | Water access findings and summary |
+| `06_auditor's_analysis.sql` | Data auditing and investigation |
+| `07_practical_plan.sql` | Engineering intervention planning and implementation |
+| `Auditor_report.csv` | Supporting audit findings |
+
+## Key Learning Outcomes
+
+Through this project, I strengthened my ability to:
+
+- Query and analyse relational databases using SQL.
+- Combine multiple datasets using different JOIN operations.
+- Apply analytical techniques to investigate real-world problems.
+- Identify data quality issues and validate analytical results.
+- Translate analytical findings into practical recommendations.
+- Design database tables with primary keys, foreign keys, defaults, and CHECK constraints.
+- Understand how databases can support operational monitoring and implementation tracking.
+
+## Project Status
+
+**Current milestone:** Engineering implementation planning and database progress-tracking structure.
+
+The `Project_progress` table provides a foundation for tracking infrastructure improvement activities, recording completion dates, and capturing updates from engineering teams.
+
+## Repository Contents
+
+This repository contains the SQL scripts, supporting analysis, and project documentation developed throughout the Maji Ndogo project.
+
