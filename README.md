@@ -1,4 +1,6 @@
-# Maji Ndogo: Water Access Analysis & Infrastructure Improvement
+# Water Access Analysis & Infrastructure Improvement
+
+### Maji Ndogo simulation project
 
 ## Project Overview
 
